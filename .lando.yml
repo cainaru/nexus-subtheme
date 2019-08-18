@@ -1,4 +1,4 @@
-name: d8-starter
+name: nexus-subtheme
 recipe: drupal8
 config:
   php: '7.2'
@@ -7,7 +7,7 @@ config:
   database: mariadb:10.3.16
 proxy:
   phpmyadmin:
-    - pma-d8-starter.lndo.site
+    - pma-nexus-subtheme.lndo.site
 services:
   phpmyadmin:
     type: phpmyadmin
