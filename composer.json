@@ -1,0 +1,119 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/config_direct_save": "^1.0",
+        "drupal/config_installer": "^1.0",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.7.0",
+        "drush-ops/behat-drush-endpoint": "^9.3",
+        "drush/drush": "~8",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-core-strict": "^8.7.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "behat/behat": "3.*",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-goutte-driver": "^1.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "drupal/coder": "^8.3.1",
+        "drupal/drupal-extension": "^3.1",
+        "jcalderonzumba/gastonjs": "^1.0.2",
+        "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+        "mikey179/vfsstream": "^1.2",
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^3.4.0",
+        "symfony/css-selector": "^2.8"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset",
+            "library",
+            "component"
+        ],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": [
+                "type:drupal-library", 
+                "type:bower-asset", 
+                "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        }
+    }
+}
