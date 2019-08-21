@@ -9,6 +9,10 @@ proxy:
   phpmyadmin:
     - pma-nexus-subtheme.lndo.site
 services:
+  node:
+    type: node
+    globals:
+      gulp-cli: "latest"
   phpmyadmin:
     type: phpmyadmin
 tooling:
@@ -16,3 +20,9 @@ tooling:
     cmd: /app/vendor/bin/drupal --root=/app/web
   drush:
     cmd: /app/vendor/bin/drush
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
