@@ -1,0 +1,20 @@
+uuid: 51373f07-b8ac-4d11-9275-22a5f9262642
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tyto
+_core:
+  default_config_hash: _TaW9xs_AMZ323Xy33YJyVAYEBMy5JH_hOmlJbzgNnM
+id: tyto_page_title
+theme: tyto
+region: content_top
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

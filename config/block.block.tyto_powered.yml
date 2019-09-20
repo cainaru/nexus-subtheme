@@ -1,0 +1,22 @@
+uuid: a009721b-3811-4e73-969e-86f67d868663
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tyto
+_core:
+  default_config_hash: auH-2-QXZxcQz-LQIrvor3PtBNHRsO0DLkEH-Ln4Gpg
+id: tyto_powered
+theme: tyto
+region: footer_second
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

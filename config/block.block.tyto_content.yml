@@ -1,0 +1,22 @@
+uuid: 5ebe467b-f5fb-4197-981e-04b1ada92390
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tyto
+_core:
+  default_config_hash: s_aYY5hLMsr1NWYy58YvgJ_E8n2civYXbvKYrvJbA_4
+id: tyto_content
+theme: tyto
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

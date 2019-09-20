@@ -1,0 +1,22 @@
+uuid: 4a1c3f6d-0f68-4093-8a88-1389106cacd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tyto
+_core:
+  default_config_hash: NQr0oD4xpdVUQYKiNIOzCtjpyeCQYCgNi1a4on8lyC0
+id: tyto_breadcrumbs
+theme: tyto
+region: highlighted
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

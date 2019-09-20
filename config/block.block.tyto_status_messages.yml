@@ -1,0 +1,22 @@
+uuid: 728c649e-64f2-419b-a7a9-a4ca666395d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tyto
+_core:
+  default_config_hash: CtLvpFsy_cj9upvydBuL1MKWm_nNWR64KDi8AOH8_WY
+id: tyto_status_messages
+theme: tyto
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

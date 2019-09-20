@@ -1,0 +1,21 @@
+uuid: a6d854be-89f6-4d18-ba75-f8c87e41aed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+    - field.storage.contact_message.field_checkboxes
+  module:
+    - options
+id: contact_message.feedback.field_checkboxes
+field_name: field_checkboxes
+entity_type: contact_message
+bundle: feedback
+label: Checkboxes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

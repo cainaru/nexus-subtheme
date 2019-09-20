@@ -1,0 +1,22 @@
+uuid: 53968123-adba-43de-ab06-537802c43395
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tyto
+_core:
+  default_config_hash: WP75ZQbROrW2UhKukrbjizRFzKkjtpVYs1DWS8bL8oA
+id: tyto_local_tasks
+theme: tyto
+region: help
+weight: 30
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

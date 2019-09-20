@@ -1,0 +1,20 @@
+uuid: 52643a5d-1f85-46d9-a8d7-caf4b90106c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tyto
+_core:
+  default_config_hash: ytYyu-zDxI_ZG4MSUcsWzsIm6_Rdk1yUhnk4mfJrmSs
+id: tyto_local_actions
+theme: tyto
+region: help
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

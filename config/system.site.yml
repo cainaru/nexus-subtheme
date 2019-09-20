@@ -1,0 +1,14 @@
+uuid: 41f70dd7-707d-4fba-a624-753600fdc812
+name: 'Nexus sub-theme'
+mail: natalie@cainaru.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
