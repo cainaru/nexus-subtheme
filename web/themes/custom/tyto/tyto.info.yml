@@ -32,7 +32,10 @@ libraries-override:
   nexus/global-css:
     css:
       theme:
+        assets/css/bootstrap.min.css: false
         assets/css/slicknav.min.css: false
+        assets/css/flexslider.css: false
+        assets/css/style.css: false
   nexus/global-js:
     js:
       assets/js/jquery.slicknav.min.js: false
